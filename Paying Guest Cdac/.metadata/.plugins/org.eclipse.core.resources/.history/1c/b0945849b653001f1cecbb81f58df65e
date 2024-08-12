@@ -1,0 +1,5 @@
+package com.example.payingguest.config;
+
+public class JwtValidator {
+
+}

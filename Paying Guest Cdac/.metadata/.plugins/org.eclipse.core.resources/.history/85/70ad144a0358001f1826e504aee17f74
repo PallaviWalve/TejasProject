@@ -1,0 +1,71 @@
+package com.example.payingguest.entities;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
+public class PG {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long pgId;
+	private String pgName;
+	private String ownerName;
+	private String contactNo;
+	private String address;
+
+	public PG() {
+
+	}
+
+	public PG(Long pgId, String pgName, String ownerName, String contactNo, String address) {
+		super();
+		this.pgId = pgId;
+		this.pgName = pgName;
+		this.ownerName = ownerName;
+		this.contactNo = contactNo;
+		this.address = address;
+	}
+
+	public Long getPgId() {
+		return pgId;
+	}
+
+	public void setPgId(Long pgId) {
+		this.pgId = pgId;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getPgName() {
+		return pgName;
+	}
+
+	public void setPgName(String pgName) {
+		this.pgName = pgName;
+	}
+
+	public String getOwnerName() {
+		return ownerName;
+	}
+
+	public void setOwnerName(String ownerName) {
+		this.ownerName = ownerName;
+	}
+
+	public String getContactNo() {
+		return contactNo;
+	}
+
+	public void setContactNo(String contactNo) {
+		this.contactNo = contactNo;
+	}
+
+}
